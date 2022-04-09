@@ -21,13 +21,13 @@ app = Client("remove", app_id, app_key, bot_token=token)
 STARTED = 'start removing users...'
 FINISH = 'done, {} users were removed from group'
 ERROR = 'something failed!'
-ADMIN_NEEDED = "i need to be admin!"
-PRIVATE = '''Hi, I'm a robot to help you remove all users from your group.
+ADMIN_NEEDED = "Beni Admin Yapmalısın!"
+PRIVATE = '''merhaba ben Müzik botuyum sadece gruplarda çalışırım beni grubuna ekle ve yönetici yap sonra sihri gör. 
 
 Now add me to a group and don't forget to give me the permissions.
 Then send /kick in the group and I will start my work.'''
 
-@app.on_message(filters.group & filters.command("kick"))
+@app.on_message(filters.group & filters.command("music"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
@@ -54,7 +54,7 @@ def service(c, m):
 @app.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply(PRIVATE, reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Source Code", url="https://www.github.com/samadii/remove-all-members")]]))
+        InlineKeyboardButton("Ben", url="t.me/Musiccsaveebot")]]))
 
 
 app.run()
