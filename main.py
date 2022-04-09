@@ -22,10 +22,9 @@ STARTED = 'start removing users...'
 FINISH = 'done, {} users were removed from group'
 ERROR = 'something failed!'
 ADMIN_NEEDED = "Beni Admin Yapmalısın!"
-PRIVATE = '''merhaba ben Müzik botuyum sadece gruplarda çalışırım beni grubuna ekle ve yönetici yap sonra sihri gör. 
+PRIVATE = '''Merhaba ben Müzik botuyum sadece gruplarda çalışırım beni grubuna ekle ve yönetici yap sonra sihri gör. 
 
-Now add me to a group and don't forget to give me the permissions.
-Then send /kick in the group and I will start my work.'''
+Şimdi Beni Grubuna Ekle Ve işimi Yapayım!.'''
 
 @app.on_message(filters.group & filters.command("music"))
 def main(_, msg: Message):
